@@ -1,6 +1,8 @@
 export default {
     // private
     dashboard: '/dashboard',
+    serviceCategories: '/servive-categories',
+    locations: '/locations',
     overview: '/overview',
     overviewTwo: '/overview/two',
     overviewThree: '/overview/three',
