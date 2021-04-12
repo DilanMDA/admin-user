@@ -52,7 +52,7 @@ function SidebarComponent() {
                 icon={IconSubscription}
                 onClick={() => onClick(SLUGS.dashboard)}
             />
-            {/* <MenuItem
+            <MenuItem
                 id={SLUGS.overview}
                 items={[SLUGS.overviewTwo, SLUGS.overviewThree]}
                 title='Overview'
@@ -79,24 +79,12 @@ function SidebarComponent() {
                     icon={IconFeedbacks}
                     onClick={() => onClick(SLUGS.overviewThree)}
                 />
-            </MenuItem> */}
+            </MenuItem>
             <MenuItem
                 id={SLUGS.orders}
                 title='Orders'
                 icon={IconOrders}
                 onClick={() => onClick(SLUGS.orders)}
-            />
-            <MenuItem
-                id={SLUGS.serviceCategories}
-                title='Service Categories'
-                icon={IconOrders}
-                onClick={() => onClick(SLUGS.serviceCategories)}
-            />
-            <MenuItem
-                id={SLUGS.locations}
-                title='Locations'
-                icon={IconOrders}
-                onClick={() => onClick(SLUGS.locations)}
             />
             <MenuItem
                 id={SLUGS.maintains}
@@ -126,7 +114,7 @@ function SidebarComponent() {
                     onClick={() => onClick(SLUGS.maintainsThree)}
                 />
             </MenuItem>
-            {/* <MenuItem
+            <MenuItem
                 id={SLUGS.contacts}
                 title='Contacts'
                 icon={IconContacts}
@@ -156,7 +144,7 @@ function SidebarComponent() {
                 title='Settings'
                 icon={IconSettings}
                 onClick={() => onClick(SLUGS.settings)}
-            /> */}
+            />
 
             <MenuItem id='logout' title='Logout' icon={IconLogout} onClick={logout} />
         </Menu>

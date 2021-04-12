@@ -7,23 +7,11 @@ import Routes from 'routes';
 import './index.css';
 import * as serviceWorker from './serviceWorker';
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-import { ApolloClient, InMemoryCache } from '@apollo/client';
-import { ApolloProvider } from '@apollo/client/react';
-
-const client = new ApolloClient({
-    uri: 'http://localhost:5000/graphql',
-    cache: new InMemoryCache()
-});
-
 ReactDOM.render(
     <ThemeProvider theme={Theme}>
-        <ApolloProvider client={client}>
-            <Router>
-                <Routes />
-            </Router>
-        </ApolloProvider>
+        <Router>
+            <Routes />
+        </Router>
     </ThemeProvider>,
     document.getElementById('root')
 );

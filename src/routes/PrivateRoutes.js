@@ -2,10 +2,8 @@ import React, { Suspense, lazy } from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import SLUGS from 'resources/slugs';
 import LoadingComponent from 'components/loading';
-import LocationsComponent from 'screens/locations/LocationsComponent';
-import ServiceCategoriesComponent from 'screens/serviceCategories/ServiceCategoriesScreen';
 
-const DashboardComponent = lazy(() => import('../screens/dashboard'));
+const DashboardComponent = lazy(() => import('./dashboard'));
 
 function PrivateRoutes() {
     return (
@@ -13,12 +11,6 @@ function PrivateRoutes() {
             <Switch>
                 <Route exact path={SLUGS.dashboard} component={DashboardComponent} />
                 <Route exact path={SLUGS.overviewTwo} render={() => <div>overviewTwo</div>} />
-                <Route exact path={SLUGS.locations} component={LocationsComponent} />
-                <Route
-                    exact
-                    path={SLUGS.serviceCategories}
-                    component={ServiceCategoriesComponent}
-                />
                 <Route exact path={SLUGS.overviewThree} render={() => <div>overviewThree</div>} />
                 <Route exact path={SLUGS.overview} render={() => <div>overview</div>} />
                 <Route exact path={SLUGS.orders} render={() => <div>orders</div>} />
